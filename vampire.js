@@ -43,7 +43,7 @@ class Vampire {
   vampireWithName(name) {
     if (this.name === name) {  //If the current vamp matches the name, return it
       return this;
-    }
+    }                          //If not, checking each of the offspring
     for (const child of this.offspring) {
       const found = child.vampireWithName(name); //Search using child
       if (found) return found;                //Return if found
