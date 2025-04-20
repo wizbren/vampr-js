@@ -6,11 +6,12 @@ class Vampire {
     this.creator = null;
   }
 
-  /** Simple tree methods **/
+/** Simple tree methods **/
 
   // Adds the vampire as an offspring of this vampire
   addOffspring(vampire) {
-
+    this.offspring.push(vampire); //Add a new vampire to this.vampire's children
+    vampire.creator = this;       //Sets this vampire as parent of new vampire
   }
 
   // Returns the total number of vampires created by that vampire
