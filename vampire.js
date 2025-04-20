@@ -37,9 +37,18 @@ class Vampire {
   }
   //^^^ Whichever vampire has less steps to get to the original, is the more senior vampire
   
+/*     SECOND ASSIGNMENT QUESTIONS BELOW     */
+
   // Returns the vampire object with that name, or null if no vampire exists with that name
   vampireWithName(name) {
-
+    if (this.name === name) {  //If the current vamp matches the name, return it
+      return this;
+    }
+    for (const child of this.offspring) {
+      const found = child.vampireWithName(name); //Search using child
+      if (found) return found;                //Return if found
+    }
+    return null; //If nothing found in branch, return null (?)
   }
 
   // Returns the total number of vampires that exist
