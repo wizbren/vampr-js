@@ -33,16 +33,18 @@ class Vampire {
 
   // Returns true if this vampire is more senior than the other vampire. (Who is closer to the original vampire)
   isMoreSeniorThan(vampire) {
-    
+    return this.numberOfVampiresFromOriginal < vampire.numberOfVampiresFromOriginal;            
   }
-
+  //^^^ Whichever vampire has less steps to get to the original, is the more senior vampire
+  
+  
   /** Stretch **/
 
   // Returns the closest common ancestor of two vampires.
   // The closest common anscestor should be the more senior vampire if a direct ancestor is used.
   // For example:
-  // * when comparing Ansel and Sarah, Ansel is the closest common anscestor.
-  // * when comparing Ansel and Andrew, Ansel is the closest common anscestor.
+  // * when comparing Ansel and Sarah, Ansel is the closest common ancestor.
+  // * when comparing Ansel and Andrew, Ansel is the closest common ancestor.
   closestCommonAncestor(vampire) {
 
   }
